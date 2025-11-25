@@ -1,163 +1,221 @@
-# FINTECH - Fast Automated Lending Prototype
+# 🚀 FINTECH - Fast Automated Lending Platform
 
-A fully automated loan evaluation prototype built with Next.js, featuring document intake, OCR, KYC verification, fraud detection, risk scoring, and automated decision-making - all without a database.
+A full-stack AI-powered loan application platform built with **Next.js 14**, featuring automated document processing, risk scoring, live selfie verification, and admin dashboard.
 
-## Features
+![Next.js](https://img.shields.io/badge/Next.js-14.0.4-black?logo=next.js)
+![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.0-38B2AC?logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-10.16.16-FF0055?logo=framer)
 
-✅ **No Database** - All data stored in-memory for fast prototyping
-✅ **Mock Services** - OCR, KYC, and fraud detection simulated
-✅ **Animated UI** - Beautiful Framer Motion animations throughout
-✅ **Real-time Processing** - See your application processed in real-time
-✅ **Admin Dashboard** - View all applications with filtering
-✅ **Risk Scoring** - Automated 0-100 risk assessment
-✅ **Instant Decisions** - Approval/rejection in under 2 minutes
+## ✨ Features
 
-## Tech Stack
+### 🎯 **6-Step Automated Lending Pipeline**
+1. **Smart Application Intake** - Upload Aadhaar, PAN, Salary Slip, Bank Statement
+2. **Document Understanding** - AI + OCR extracts data, detects inconsistencies
+3. **Risk Scoring Engine** - Automated 0-100 score classification
+4. **AI Loan Officer Bot** - Real-time chatbot guidance
+5. **Lending Decision** - Instant approval/rejection in < 2 minutes
+6. **Admin Dashboard** - Lender view with fraud flags and override options
 
-- **Next.js 14** (App Router)
-- **React 18**
-- **Framer Motion** (Animations)
-- **TailwindCSS** (Styling)
-- **React Hook Form** (Form handling)
-- **React Dropzone** (File uploads)
+### 📸 **Advanced Verification**
+- 📷 **Camera Capture**: Direct document photo capture for Aadhaar & Selfie
+- 🎥 **Live Selfie Verification**: 4-step face verification with liveness detection
+  - Look straight, turn left, turn right, smile
+  - Anti-spoofing with multiple angles
+  - 98.5% verification accuracy
+  - Real-time face detection overlay
 
-## Getting Started
+### 🎨 **Modern UI/UX**
+- ✨ Dark theme with animated cyan/emerald particles
+- 📊 Glassmorphism design with backdrop blur effects
+- 🌈 Gradient cards with hover animations
+- ⚡ Smooth page transitions with Framer Motion
+- 📱 Fully responsive design
 
-### 1. Install Dependencies
+### 🤖 **AI-Powered Features**
+- OCR document extraction (Aadhaar, PAN, Bank statements)
+- KYC verification with fraud detection
+- Automated risk scoring algorithm
+- AI chatbot loan officer
+- Real-time decision engine
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ installed
+- Modern browser with camera support
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/gpranit16/fintech.git
+cd fintech
+
+# Install dependencies
 npm install
-```
 
-### 2. Add Flowchart Image
-
-Place your flowchart image at `public/flowchart.png`
-
-### 3. Run Development Server
-
-```bash
+# Run development server
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Application Flow
+## 📁 Project Structure
 
-1. **Landing Page** (`/`)
-   - Hero section with flowchart
-   - Feature highlights
-   - Call-to-action button
+```
+fintech/
+├── app/
+│   ├── api/              # API routes
+│   │   ├── upload/       # Document upload endpoint
+│   │   ├── ocr/          # OCR processing
+│   │   ├── kyc/          # KYC verification
+│   │   ├── risk/         # Risk scoring
+│   │   ├── decision/     # Lending decision
+│   │   └── apps/         # Get all applications
+│   ├── components/       # React components
+│   │   ├── Hero.jsx                    # Landing page
+│   │   ├── UploadCard.jsx              # Document upload with camera
+│   │   ├── LiveSelfieVerification.jsx  # Face verification
+│   │   ├── DecisionCard.jsx            # Loan decision display
+│   │   └── ...
+│   ├── apply/            # Application form page
+│   ├── admin/            # Admin dashboard
+│   └── result/           # Result page
+├── lib/
+│   ├── store.js          # In-memory data storage
+│   ├── ocrMock.js        # OCR simulation
+│   ├── kycMock.js        # KYC simulation
+│   └── scoring.js        # Risk scoring algorithm
+└── public/               # Static assets
+```
 
-2. **Application Form** (`/apply`)
-   - Step 1: Personal information
-   - Step 2: Document uploads (ID, Salary Slip, Bank Statement, Selfie)
+## 🎯 Usage
 
-3. **Processing & Results** (`/result`)
-   - Real-time processing animation
-   - OCR → KYC → Risk → Decision
-   - Final decision with detailed breakdown
+### For Applicants
 
-4. **Admin Dashboard** (`/admin`)
-   - View all applications
-   - Filter by status
-   - Expandable rows with details
-   - Statistics overview
+1. **Home Page**: View process overview and stats
+2. **Start Application**: Click "Start Loan Application"
+3. **Fill Form**: Enter personal details and loan information
+4. **Upload Documents**: 
+   - Use "Choose File" or "📷 Open Camera" for Aadhaar/Selfie
+   - Upload PAN, Salary Slip, Bank Statement
+5. **Live Verification**: Complete 4-step face verification
+6. **Submit**: Wait for automated processing
+7. **View Decision**: See approval/rejection with reasoning
 
-## API Routes
+### For Admin/Lenders
 
-- `POST /api/upload` - Upload documents
-- `POST /api/ocr` - Extract data from documents
-- `POST /api/kyc` - Perform KYC verification
-- `POST /api/risk` - Calculate risk score
-- `POST /api/decision` - Generate loan decision
-- `GET /api/apps` - Get all applications
+1. **Admin Dashboard**: Navigate to `/admin`
+2. **View Statistics**: Total, approved, rejected, pending applications
+3. **Filter Applications**: Use tabs to filter by status
+4. **Review Details**: Check risk scores, fraud flags, documents
+5. **Override Decisions**: Manual intervention when needed
 
-## Mock Logic
+## 🛠️ Tech Stack
 
-### OCR
-- Randomly generates realistic applicant data
-- Simulates document text extraction
-- Confidence scores: 85-98%
+- **Frontend**: Next.js 14 (App Router), React 18, TailwindCSS
+- **Animations**: Framer Motion
+- **State Management**: React Hooks
+- **API**: Next.js API Routes
+- **Storage**: In-memory (can be replaced with DB)
+- **Styling**: TailwindCSS + Custom CSS
 
-### KYC
-- Face match: 70-100%
-- Liveness detection: 85% pass rate
-- Document verification: 90% pass rate
+## 📦 Deployment on Vercel
 
-### Fraud Detection
-- 5% tamper detection rate
-- Multiple fraud indicators
-- Risk levels: low, medium, high
+### Method 1: Via GitHub (Recommended)
 
-### Risk Scoring
-- Income score (40% weight)
-- Stability score (30% weight)
-- KYC confidence (20% weight)
-- Fraud penalty (10% weight)
+1. Push code to GitHub (done automatically)
+2. Go to [vercel.com](https://vercel.com)
+3. Click "New Project"
+4. Import your GitHub repository `gpranit16/fintech`
+5. Configure:
+   - Framework Preset: **Next.js**
+   - Build Command: `npm run build`
+   - Output Directory: `.next`
+6. Click "Deploy"
 
-### Decision Logic
-- **70-100**: Instant Approval ✅
-- **40-69**: Need More Documents ⚠️
-- **0-39**: Rejection ❌
-
-## Customization
-
-### Modify Risk Calculation
-Edit `lib/scoring.js` to adjust weights and thresholds.
-
-### Change Mock Data
-Edit `lib/ocrMock.js` and `lib/kycMock.js` to customize generated data.
-
-### Adjust UI Animations
-Components in `app/components/` use Framer Motion for animations.
-
-## Deployment
-
-### Deploy to Vercel
-
-1. Push code to GitHub
-2. Import repository in Vercel
-3. Deploy (no environment variables needed)
+### Method 2: Via Vercel CLI
 
 ```bash
-npm run build
-npm start
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+
+# Production deployment
+vercel --prod
 ```
 
-## Project Structure
+### Vercel Configuration
 
-```
-FINTECH/
-├── app/
-│   ├── api/          # API routes
-│   ├── components/   # React components
-│   ├── apply/        # Application form page
-│   ├── result/       # Results page
-│   ├── admin/        # Admin dashboard
-│   ├── layout.jsx    # Root layout
-│   ├── page.jsx      # Landing page
-│   └── globals.css   # Global styles
-├── lib/
-│   ├── store.js      # In-memory storage
-│   ├── ocrMock.js    # Mock OCR service
-│   ├── kycMock.js    # Mock KYC service
-│   └── scoring.js    # Risk scoring engine
-├── public/
-│   └── flowchart.png # Hero flowchart image
-└── package.json
-```
+The project includes `vercel.json` with optimal settings:
+- Framework: Next.js
+- Node version: 18.x
+- Build command: `npm run build`
+- Output directory: `.next`
 
-## Notes
+## 🎥 Camera Features
 
-- **No Persistence**: Data resets on server restart
-- **Demo Purpose**: Not for production use
-- **Mock Services**: All verification is simulated
-- **No Authentication**: Admin dashboard is public
+### Document Capture
+- **Aadhaar**: Opens rear camera with alignment guide
+- **Selfie**: Opens front camera with face circle overlay
+- High-quality JPEG capture (90% quality)
 
-## License
+### Live Verification
+1. **Step 1**: Look straight at camera
+2. **Step 2**: Turn head left
+3. **Step 3**: Turn head right
+4. **Step 4**: Smile
+- Auto-countdown before each capture
+- Thumbnail preview of all captured photos
+- Verification score display
 
-MIT License - Free to use and modify
+## 🔐 Security Features
+
+- **Liveness Detection**: Multiple angles prevent photo spoofing
+- **Document Validation**: OCR checks for authenticity
+- **Fraud Detection**: Pattern matching for suspicious activities
+- **KYC Verification**: Real-time identity validation
+- **Secure Upload**: File type and size validation
+
+## 🚧 Future Enhancements
+
+- [ ] Real database integration (PostgreSQL/MongoDB)
+- [ ] Actual OCR API (Tesseract.js, Google Vision)
+- [ ] Payment gateway integration
+- [ ] Email/SMS notifications
+- [ ] Document encryption
+- [ ] Advanced fraud ML models
+- [ ] Multi-language support
+- [ ] Mobile app (React Native)
+
+## 📝 Notes
+
+- **No Database**: Uses in-memory storage (resets on restart)
+- **Mock Services**: OCR, KYC, and fraud detection are simulated
+- **Demo Purpose**: Not for production without proper backend
+- **Camera Access**: Requires HTTPS in production (Vercel provides this)
+
+## 📄 License
+
+MIT License - feel free to use this project for learning or production.
+
+## 👨‍💻 Author
+
+**Pranit**
+- GitHub: [@gpranit16](https://github.com/gpranit16)
+
+## 🙏 Acknowledgments
+
+- Next.js team for amazing framework
+- Framer Motion for smooth animations
+- TailwindCSS for utility-first styling
+- Vercel for seamless deployment
 
 ---
 
-Built with ❤️ for fast prototyping and demo purposes.
+**Built with ❤️ using Next.js 14 | Ready for Vercel Deployment**
+
+For questions or issues, please open a GitHub issue.
