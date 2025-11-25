@@ -1,0 +1,20 @@
+<!-- 
+IMPORTANT: Add your flowchart image here!
+Place the flowchart image from your Canva project as:
+public/flowchart.png
+
+The image should be:
+- Format: PNG or JPG
+- Recommended size: 1200x600px or similar
+- High quality for clear display on the landing page
+
+If you don't have the image yet, you can:
+1. Create a placeholder image
+2. Use the one from your Canva project shown in the screenshot
+3. The app will still work, but the hero section may not display the flowchart
+
+The flowchart is referenced in:
+- app/components/Hero.jsx (line with: src="/flowchart.png")
+-->
+
+This is a placeholder file. Replace it with your actual flowchart image.
